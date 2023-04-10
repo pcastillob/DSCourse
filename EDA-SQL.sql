@@ -11,7 +11,7 @@ select sum(payload_mass__kg_) from spacex where customer = 'NASA (CRS)';
 select avg(payload_mass__kg_) from spacex where booster_version = 'F9 v1.1';
 
 --TASK 5
-select min(date) from spacex where landing__outcome like 'Success%'
+select min(date) from spacex where landing__outcome =  'Success (ground pad)'
 
 --TASK 6
 select booster_version from spacex where landing__outcome = 'Success (drone ship)' and (payload_mass__kg_ > 4000 and payload_mass__kg_ <6000);
